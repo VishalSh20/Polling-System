@@ -21,6 +21,7 @@ import KickedToast from "./components/KickedToast";
 
 
 function App() {
+  console.log(import.meta.env.VITE_BACKEND_URL);
   const [showKickedToast, setShowKickedToast] = React.useState(false);
   const kickedToastTimeout = React.useRef(null);
   const [showStudentJoinedToast, setShowStudentJoinedToast] = React.useState(false);
