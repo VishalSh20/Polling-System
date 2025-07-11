@@ -1,12 +1,53 @@
-# React + Vite
+# Intervue.IO Internship Assignment – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** submission for the Intervue.IO internship assignment. It is a modern, real-time polling web application that allows teachers to create and manage polls, and students to participate in live sessions. The frontend is built with React and Vite, and communicates with a Node.js/Express backend over REST and Socket.io.
 
-Currently, two official plugins are available:
+## Features
+- **Role-based login:** Teacher and Student flows
+- **Live Polling:** Teachers can create questions, students can answer in real-time
+- **Poll Results:** View live and past poll results with visual feedback
+- **Kick Functionality:** Teachers can remove participants from the session
+- **Real-time Chat:** Sidebar chat for all participants
+- **Toast Notifications:** Feedback for join/kick events
+- **Redux State Management:** With persistence for smooth UX
+- **Loading Indicators:** For actions like poll submission
+- **PropTypes:** Used throughout for type safety
+- **Responsive UI:** Styled with Tailwind CSS and Flowbite-react
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+### Frontend
+- **React** (with Hooks)
+- **Vite** (for fast build and HMR)
+- **Redux Toolkit** & **redux-persist**
+- **Socket.io-client** (real-time communication)
+- **Axios** (REST API calls)
+- **Tailwind CSS** & **Flowbite-react** (UI components)
+- **Lucide-react** (icons)
+- **Prop-types** (runtime type checking)
 
-## Expanding the ESLint configuration
+### Backend (for reference)
+- **Node.js** with **Express**
+- **Socket.io** (real-time events)
+- **Prisma ORM** (PostgreSQL database)
+- **REST API** for poll data
+- **Role and participant management**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Environment Variables
+- Set `VITE_BACKEND_URL` in `.env` (e.g. `VITE_BACKEND_URL=https://your-backend-url`)
+- The backend expects `FRONTEND_URL` in its own `.env`
+
+## How to Run
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Ensure the backend is running and accessible at the URL specified in `VITE_BACKEND_URL`.
+
+## Notes
+- All features described above are implemented.
+- For backend setup, see the backend repository.
+- For any questions, contact Vishal Sharma.
